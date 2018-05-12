@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {question} from '../shared/interface';
-import {QuestionService} from '../question/question.service';
+import {question} from '../../shared/interface';
+import {QuestionService} from '../../services/question/question.service';
 
 @Component({
   selector: 'app-question',

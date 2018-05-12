@@ -1,13 +1,13 @@
-import {Injectable} from '@angular/core';
-import * as globals from '../shared/interface';
+import { Injectable } from '@angular/core';
+import * as globals from '../../shared/interface';
 
 import {Observable} from 'rxjs/Observable';
-
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class QuestionService {
-  constructor() {
-  }
 
+  constructor() { }
   public nextQuestion(): globals.question {
     return globals.questions[this.generate()];
   }

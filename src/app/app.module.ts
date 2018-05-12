@@ -8,10 +8,14 @@ import { environment } from '../environments/environment';
 import { MaterialdesignModule } from './modules/material-design/material-design.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+//components
 import { NavbarComponent } from './components/navbar/navbar.component';
-import {CountdownTimerComponent} from './countdown-timer/countdown-timer.component';
-import {QuestionService} from './question/question.service';
-import {QuestionComponent} from './question/question.component';
+import {CountdownTimerComponent} from './components/countdown-timer/countdown-timer.component';
+import {QuestionComponent} from './components/question/question.component';
+
+//services
+import { QuestionService } from './services/question/question.service';
 
 @NgModule({
   declarations: [
