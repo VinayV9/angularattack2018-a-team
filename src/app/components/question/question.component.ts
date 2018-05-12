@@ -1,6 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {question} from '../../shared/interface';
 import {QuestionService} from '../../services/question/question.service';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-question',
@@ -10,21 +11,31 @@ import {QuestionService} from '../../services/question/question.service';
 })
 export class QuestionComponent implements OnInit {
   isTimeUp = false;
-  question: question;
-  constructor(private questionService: QuestionService) {
+  questions: question[] = [];
+  selectedOption: string;
+  isLinear = false;
+  firstFormGroup: FormGroup;
+
+  constructor(private questionService: QuestionService,
+              private _formBuilder: FormBuilder
+  ) {
   }
 
   ngOnInit() {
     this.initialise();
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
     this.refresh();
   }
 
   initialise(): void {
-    //TODO
+    this.questions = this.questionService.getQuestions();
+    console.log(this.questions);
   }
 
   refresh(): void {
-    this.question = this.questionService.nextQuestion();
-  };
+    this.questions.push(this.questionService.nextQuestion());
+  }
 
 }

@@ -12,6 +12,10 @@ export class QuestionService {
     return globals.questions[this.generate()];
   }
 
+  public getQuestions(): globals.question[]{
+    return globals.questions;
+  }
+
   private generate(): number {
     return this.getRandomInt(0, (globals.questions.length - 1));
   }

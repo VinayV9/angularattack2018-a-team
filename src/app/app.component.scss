@@ -1,14 +1,13 @@
 @import 'src/variables.scss';
 
 header {
-  //position: fixed;
+  position: fixed;
   width: 100%;
   top: 0;
-  //height: 10vh;
+  height: 10vh;
 }
 
 main {
   height: 100%;
-  //margin-top: 10vh;
-  background-color: $col-background;
+  margin-top: 10vh;
 }
