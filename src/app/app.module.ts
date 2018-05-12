@@ -16,13 +16,15 @@ import {QuestionComponent} from './components/question/question.component';
 
 //services
 import { QuestionService } from './services/question/question.service';
+import { QuestionGoogleFormComponent } from './components/question-google-form/question-google-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CountdownTimerComponent,
-    QuestionComponent
+    QuestionComponent,
+    QuestionGoogleFormComponent
   ],
   imports: [
     BrowserModule,
