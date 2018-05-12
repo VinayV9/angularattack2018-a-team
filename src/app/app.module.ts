@@ -9,11 +9,16 @@ import { MaterialdesignModule } from './modules/material-design/material-design.
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import {CountdownTimerComponent} from './countdown-timer/countdown-timer.component';
+import {QuestionService} from './question/question.service';
+import {QuestionComponent} from './question/question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    CountdownTimerComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [
+    QuestionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

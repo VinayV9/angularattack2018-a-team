@@ -1,0 +1,35 @@
+<div class="question-container">
+  <app-countdown-timer (timeUp)="isTimeUp=true"></app-countdown-timer>
+  <div class="question-description">
+      {{ question.label }}
+
+   </div>
+
+ <button (click)="refresh()">
+  <span> Next question </span> 
+</button>
+  <div class="answer-buttons">
+    <button>
+      <span>A:</span>  {{ question.A }}
+    </button>
+    <button>
+      <span>B:</span>{{ question.B }} 
+    </button>
+    <button>
+      <span>C:</span> {{ question.C }}
+    </button>
+    <button>
+      <span>D:</span>{{ question.D }}>
+    </button>
+  </div>
+  <div *ngIf="isTimeUp">
+    Time up!
+  </div>now ow
+
+  <div style="padding-top: 5em">
+    <div style="padding-bottom: 0.5em">
+      Who wants to be a millionaire example:
+    </div>
+    <img src="/assets/example_quiz.png" style="width: 400px">
+  </div>
+</div>
