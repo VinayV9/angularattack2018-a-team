@@ -1,2 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+h1{
+    font-family: roboto;
+    font-size: 96;
+    letter-spacing: -1.5;
+}
+
+h2{
+    font-family: roboto;
+    font-size: 60;
+    letter-spacing: -0.5;
+}
+
+h3{
+    font-family: roboto;
+    font-size: 48;
+    letter-spacing: 0;
+}
+
+h4{
+    font-family: roboto;
+    font-size: 34;
+    letter-spacing: 0.25;
+}
+
+h5{
+    font-family: roboto;
+    font-size: 24;
+    letter-spacing: 0;
+}
+
+h6{
+    font-family: roboto;
+    font-size: 20;
+    letter-spacing: 0.15;
+}
+
+button{
+    font-family: roboto;
+    font-size: 14;
+    letter-spacing: 0.4;
+}
