@@ -6,12 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Stack 
 
 Angular 6
+
 Angular Material UI
 
 ## App features
 
 PWA
+
 Responsive
+
 Supports all devices
 
 ## PWA feature information
@@ -21,6 +24,7 @@ Supports all devices (android, ios, desktop, mac)
 ## Local Development Info
 
 npm install
+
 ng serve -o
 
 ## production
