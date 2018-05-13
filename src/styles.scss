@@ -1,9 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-body, html {
-  //height: 100%;Ω
-}
 
 * {
   margin: 0px;
@@ -51,4 +48,29 @@ button {
   font-family: roboto;
   font-size: 14;
   letter-spacing: 0.4;
+}
+
+
+
+// loader
+#loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid red;
+  width: 100px;
+  height: 100px;
+  margin:50% auto;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
