@@ -29,7 +29,7 @@ export class CountdownTimerComponent implements OnInit {
       this.countDownEvent.emit(this.secondsCount);
       if (this.secondsCount === 0) {
 
-         console.log("time is up");
+        // console.log("time is up");
         this.timeUp.emit(true);
       }
     });
