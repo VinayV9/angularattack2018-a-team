@@ -5,6 +5,7 @@ import {CountdownTimerComponent} from './components/countdown-timer/countdown-ti
 import {QuestionGoogleFormComponent} from './components/question-google-form/question-google-form.component';
 import {AudioQuestionComponent} from './components/audio-question/audio-question.component';
 import { HomeComponent } from './components/home/home.component';
+import { ResultComponent } from './components/result/result.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'question', component: QuestionComponent },
   { path: 'audio-question', component: AudioQuestionComponent },
   { path: 'question-form', component: QuestionGoogleFormComponent },
+  { path: 'result', component: ResultComponent},
   { path: '**', component: QuestionComponent }
 ];
 
