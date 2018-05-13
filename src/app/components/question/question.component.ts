@@ -5,6 +5,7 @@ import {Observable} from 'rxjs/Observable';
 import { ISubscription } from "rxjs/Subscription";
 import 'rxjs/add/observable/interval';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-question',
@@ -25,7 +26,9 @@ export class QuestionComponent implements OnInit {
   selectedOption: string;
   questionAnswered: question[] = [];
 
-  constructor(private questionService: QuestionService) {
+  constructor(private questionService: QuestionService,
+              public snackBar: MatSnackBar
+  ) {
   }
 
   
@@ -68,13 +71,23 @@ export class QuestionComponent implements OnInit {
   }
 
   onNotify(message:number) {
-    alert(message);
+    //don't use alret it will spoil user expreirence call next question instead
+    // alert(message);
+    this.openSnackBar("Time's Up", "ok")
     this.secondsCount = 5;
   }
 
   onCountChange(newCount:number) {
     this.secondsCount = newCount;
   }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+
+  
   /** TODO
    * This was meant to be used to move ot the next question automatically 
    * when the time out elapsed

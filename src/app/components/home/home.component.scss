@@ -1,0 +1,13 @@
+.box{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin-top:8vh;
+    justify-content: space-around;
+}
+
+.item{
+    padding:5px;
+    width:40vw;
+    height:auto;
+}

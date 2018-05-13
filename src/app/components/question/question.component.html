@@ -3,10 +3,13 @@
 <div class="quiz">
     <mat-card class="quiz-box">
 
+        <app-countdown-timer [(secondsCount)]='secondsCount' (timeUp)='onNotify($event)' (countDownEvent)='onCountChange($event)'>
+        </app-countdown-timer>
+
         <mat-card class="q-box">
             <mat-card-title>{{question.label}}</mat-card-title>
         </mat-card>
-        <mat-card-content>
+        <mat-card-content class="options">
             <mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
                 <mat-radio-button class="example-radio-button" *ngFor="let choice of question.choices" [value]="choice">
                     {{ choice.option }}
@@ -20,12 +23,8 @@
       </mat-card>
 </div>
 
-<!-- <app-countdown-timer [(secondsCount)]='secondsCount' 
-  (timeUp)='onNotify($event)'
-  (countDownEvent)='onCountChange($event)'>
-</app-countdown-timer> 
-{{secondsCount}}
--->
+
+
 
 
 
