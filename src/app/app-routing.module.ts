@@ -5,7 +5,7 @@ import {CountdownTimerComponent} from './components/countdown-timer/countdown-ti
 import {QuestionGoogleFormComponent} from './components/question-google-form/question-google-form.component';
 
 const routes: Routes = [
-  { path: '', component: CountdownTimerComponent },
+  { path: '', component: QuestionComponent },
   { path: 'question-form', component: QuestionGoogleFormComponent },
   { path: '**', component: QuestionComponent }
 ];

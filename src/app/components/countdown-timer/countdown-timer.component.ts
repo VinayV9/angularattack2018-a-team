@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core';
 import {timer} from 'rxjs';
 // import {timer} from 'rxjs/observable/timer';
 
@@ -8,19 +8,24 @@ import {timer} from 'rxjs';
   styleUrls: ['./countdown-timer.component.scss']
 })
 export class CountdownTimerComponent implements OnInit {
-  secondsCount = 5; // todo: make this 30;
-  @Output() timeUp = new EventEmitter<boolean>();
+  @Input ('secondsCount') secondsCount; // todo: make this 30;
+  @Output() timeUp : EventEmitter <boolean> = new EventEmitter<boolean>();
+  
 
   constructor() {
   }
+
 
   ngOnInit() {
     timer(1000, 1000).subscribe(() => {
       this.secondsCount -= 1;
       if (this.secondsCount === 0) {
+
+         console.log("time is up");
         this.timeUp.emit(true);
       }
     });
   }
+
 
 }

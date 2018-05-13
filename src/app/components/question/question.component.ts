@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,EventEmitter, Output } from '@angular/core';
 import { question } from '../../shared/interface';
 import { QuestionService } from '../../services/question/question.service';
 import {Observable} from 'rxjs/Observable';
@@ -13,9 +13,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   providers: [QuestionService],
 })
 export class QuestionComponent implements OnInit {
+  @Input('secondsCount') secondsCount: number;
+  @Output() notify: EventEmitter <number> = new EventEmitter<number>();
+
   isTimeUp = false;
   questions: question[] = [];
   question: question;
+  qAllowedTime: number =  15;
   private questionSubscription: ISubscription;
   private rolloutNextQuestionSubs: ISubscription;
   selectedOption: string;
@@ -27,6 +31,8 @@ export class QuestionComponent implements OnInit {
     private _formBuilder: FormBuilder
   ) {
   }
+
+  
 
   ngOnInit() {
     this.initialise();
@@ -53,6 +59,7 @@ export class QuestionComponent implements OnInit {
 
   refresh(): void {
     this.question = this.questionService.nextQuestion();
+    this.notify.emit(5);
   }
 
   refreshTimer(): ISubscription {
@@ -66,6 +73,12 @@ export class QuestionComponent implements OnInit {
   ngOnDestroy() {
     this.rolloutNextQuestionSubs.unsubscribe();
   }
+
+  onNotify(message:number) {
+    alert(message);
+    this.secondsCount = 5;
+  }
+
   /** TODO
    * This was meant to be used to move ot the next question automatically 
    * when the time out elapsed
