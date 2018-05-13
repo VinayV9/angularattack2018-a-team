@@ -1,11 +1,22 @@
+<!-- <app-countdown-timer [(secondsCount)]='qAllowedTime' (timeUp)='onNotify($event)'></app-countdown-timer> -->
 
+<div class="quiz">
+    <mat-card class="quiz-box">
+        <mat-card class="q-box">
+            <mat-card-title>{{question.label}}</mat-card-title>
+        </mat-card>
+            
+              <button  *ngFor="let choice of question.choices" mat-raised-button (click)="refresh()">
+                {{ choice.option }}
+              </button>
+              {{secondsCount}}
+      </mat-card>
+</div>
 
-
-<mat-card>
-      <mat-card-title>{{question.label}}</mat-card-title>
-
-        <button  *ngFor="let anOption of question.choices" mat-raised-button (click)="refresh()">{{ anOption.option }}</button>
- </mat-card>
+<app-countdown-timer [(secondsCount)]='secondsCount' 
+  (timeUp)='onNotify($event)'
+  (countDownEvent)='onCountChange($event)'>
+</app-countdown-timer>
 
 
 

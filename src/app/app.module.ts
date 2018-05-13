@@ -19,6 +19,7 @@ import {QuestionComponent} from './components/question/question.component';
 import { QuestionService } from './services/question/question.service';
 import { QuestionGoogleFormComponent } from './components/question-google-form/question-google-form.component';
 import { AudioQuestionComponent } from './components/audio-question/audio-question.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AudioQuestionComponent } from './components/audio-question/audio-questi
     CountdownTimerComponent,
     QuestionComponent,
     QuestionGoogleFormComponent,
-    AudioQuestionComponent
+    AudioQuestionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

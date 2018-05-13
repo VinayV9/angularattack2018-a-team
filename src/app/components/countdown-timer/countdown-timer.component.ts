@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core';
 import {timer} from 'rxjs';
 // import {timer} from 'rxjs/observable/timer';
 
@@ -8,19 +8,32 @@ import {timer} from 'rxjs';
   styleUrls: ['./countdown-timer.component.scss']
 })
 export class CountdownTimerComponent implements OnInit {
-  secondsCount = 5; // todo: make this 30;
-  @Output() timeUp = new EventEmitter<boolean>();
+  
+  // Reveive this value from the QuestionComponent based on current question
+  @Input ('secondsCount') secondsCount; // todo: make this 30;
+  
+  // Message  QuestionComponent to inform of timeUp event
+  @Output() timeUp : EventEmitter <boolean> = new EventEmitter<boolean>();
+
+  // Message countDownEvent to current countdown value to parent
+  @Output() countDownEvent : EventEmitter <number> = new EventEmitter<number>();
+  
 
   constructor() {
   }
 
+
   ngOnInit() {
     timer(1000, 1000).subscribe(() => {
       this.secondsCount -= 1;
+      this.countDownEvent.emit(this.secondsCount);
       if (this.secondsCount === 0) {
+
+         console.log("time is up");
         this.timeUp.emit(true);
       }
     });
-  }
+  }}
 
-}
+
+
