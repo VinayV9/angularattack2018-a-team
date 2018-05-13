@@ -1,6 +1,36 @@
 # ATeam
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0. This is an Angular Quiz Progressive Web App. 
+
+
+## Stack 
+
+Angular 6
+
+Angular Material UI
+
+## App features
+
+PWA
+
+Responsive
+
+Supports all devices
+
+## PWA feature information
+
+Supports all devices (android, ios, desktop, mac)
+
+## Local Development Info
+
+npm install
+
+ng serve -o
+
+## production
+
+ng build --prod
+
 
 ## Development server
 

@@ -1,69 +1,14 @@
-<!-- <div class="question-container">
-  <app-countdown-timer (timeUp)="isTimeUp=true"></app-countdown-timer>
-  <div class="question-description">
-      {{ question.label }}
 
-   </div>
 
- <button (click)="refresh()">
-  <span> Next question </span>
-</button>
-  <div class="answer-buttons">
-    <button>
-      <span>A:</span>  {{ question.A }}
-    </button>
-    <button>
-      <span>B:</span>{{ question.B }}
-    </button>
-    <button>
-      <span>C:</span> {{ question.C }}
-    </button>
-    <button>
-      <span>D:</span>{{ question.D }}>
-    </button>
-  </div>
-  <div *ngIf="isTimeUp">
-    Time up!
-  </div>now ow
 
-  <div style="padding-top: 5em">
-    <div style="padding-bottom: 0.5em">
-      Who wants to be a millionaire example:
-    </div>
-    <img src="/assets/example_quiz.png" style="width: 400px">
-  </div>
-</div> -->
+<mat-card>
+      <mat-card-title>{{question.label}}</mat-card-title>
 
-<!--<mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper" color="warn">-->
-        <!--<mat-step label="question"  *ngFor="let question of questions; let i = index" color="warn">-->
-            <!--<mat-card >-->
-                <!--<mat-card-title>-->
+        <button  *ngFor="let anOption of question.choices" mat-raised-button (click)="refresh()">{{ anOption.option }}</button>
+ </mat-card>
 
-                  <!--{{ question.label }}-->
-                <!--</mat-card-title>-->
 
-                <!--<mat-card-content>-->
-                    <!--<mat-radio-group class="example-radio-group" [(ngModel)]="selectedOption" color="warn">-->
-                        <!--<mat-radio-button class="example-radio-button" *ngFor="let choice of question.choices" [value]="choice">-->
-                          <!--<p class="option">{{choice.option}}</p>-->
-                        <!--</mat-radio-button>-->
-                    <!--</mat-radio-group>-->
-                <!--</mat-card-content>-->
-                <!--<mat-card-actions>-->
-                    <!--<div>-->
-                        <!--<button *ngIf="i != 0"  mat-raised-button color="warn" matStepperPrevious >Previous</button>-->
-                        <!--<button  mat-raised-button color="warn" matStepperNext >Next</button>-->
-                      <!--</div>-->
-                <!--</mat-card-actions>-->
-            <!--</mat-card>-->
-        <!--</mat-step>-->
-        <!--<mat-step aria-label="Done">-->
-            <!--You are now done.-->
-            <!--<div>-->
-              <!--<button mat-button matStepperPrevious>Back</button>-->
-              <!--<button mat-button (click)="stepper.reset()">Reset</button>-->
-            <!--</div>-->
-        <!--</mat-step>-->
-<!--</mat-horizontal-stepper>-->
 
-<!--<app-countdown-timer (timeUp)="isTimeUp=true"></app-countdown-timer>-->
+
+
+

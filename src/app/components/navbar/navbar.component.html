@@ -1,9 +1,31 @@
-<mat-toolbar color="warn">
-    <i class="material-icons" [matMenuTriggerFor]="menu">menu</i>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Profile</button>
-      <button mat-menu-item>Quiz</button>
-    </mat-menu>
-    <span class="heading">Angular Phone a Friend Quiz</span>
-    <i class="material-icons">more_vert</i>
+
+<mat-toolbar color="warn" class="toolbar">
+   <button mat-icon-button >
+      <i class="material-icons" (click)="drawer.toggle()">menu</i>
+   </button>
+  
+  <span class="heading">Angular Phone a Friend Quiz</span>
+
+  <button mat-icon-button >
+      <i class="material-icons" [matMenuTriggerFor]="more">more_vert</i>
+  </button>
+  <mat-menu #more="matMenu">
+    <button mat-menu-item>Help</button>
+    <button mat-menu-item>Feedback</button>
+    <button mat-menu-item>About Us</button>
+  </mat-menu>
 </mat-toolbar>
+
+
+<mat-sidenav-container class="example-sidenav-container" >
+  <mat-sidenav #drawer>
+    <mat-nav-list >
+      <a mat-list-item routerLink=".">home</a>
+      <a mat-list-item routerLink="." >Quiz</a>
+      <a mat-list-item routerLink="question-form">Create Question</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
