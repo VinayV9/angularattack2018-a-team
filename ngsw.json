@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "index": "https://github.com/Hackbit/angularattack2018-a-team/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://github.com/Hackbit/angularattack2018-a-team/favicon.ico",
+        "https://github.com/Hackbit/angularattack2018-a-team/index.html",
+        "https://github.com/Hackbit/angularattack2018-a-team/main.72839d5b1fad3b6221f2.js",
+        "https://github.com/Hackbit/angularattack2018-a-team/polyfills.2903ad11212d7d797800.js",
+        "https://github.com/Hackbit/angularattack2018-a-team/runtime.6afe30102d8fe7337431.js",
+        "https://github.com/Hackbit/angularattack2018-a-team/styles.1d7c87a42a3b2cca3b11.css"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Roboto:300,400,500",
+        "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/s\\/materialicons",
+        "https:\\/\\/docs\\.google\\.com\\/forms\\/d\\/e\\/1FAIpQLScWsqFTA7n-kSkgV2_FNTW34nkGTJZ2WtKw1PyD8gxTQ8UlQg\\/viewform\\?embedded=true"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://github.com/Hackbit/angularattack2018-a-team/assets/example_quiz.png",
+        "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-128x128.png",
+        "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-144x144.png",
+        "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-152x152.png",
+        "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-192x192.png",
+        "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-384x384.png",
+        "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-512x512.png",
+        "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-72x72.png",
+        "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-freshness",
+      "patterns": [
+        "\\/",
+        "\\/question-form"
+      ],
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": 3600000,
+      "timeoutMs": 10000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "https://github.com/Hackbit/angularattack2018-a-team/assets/example_quiz.png": "0faaac3159b8cebb0b9919bcfb10a286ddc644c7",
+    "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-128x128.png": "c9228073df55e5b6351df146b3c6682c56cd832e",
+    "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-144x144.png": "f12b02b5dbf0a9a5dfa8629ce703bc355ade2212",
+    "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-152x152.png": "f9752287e3c9524f0908ea24e72d4eccff45f025",
+    "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-192x192.png": "e1b26b5ee7a602609c1a494986b909fff27c1726",
+    "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-384x384.png": "08548d97d0344e7ed5937f2ff6cb682eb42b59fa",
+    "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-512x512.png": "0d78cf9613e4956b8a6d1653b2e1fa85105ab426",
+    "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-72x72.png": "94183130b66d03ebb00f85e3f414407328fc98e9",
+    "https://github.com/Hackbit/angularattack2018-a-team/assets/icons/icon-96x96.png": "23bf23627612df118827de6b884f893bb68bfff0",
+    "https://github.com/Hackbit/angularattack2018-a-team/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://github.com/Hackbit/angularattack2018-a-team/index.html": "a5de2d048ca548e3488f4ef38874774fa0b10489",
+    "https://github.com/Hackbit/angularattack2018-a-team/main.72839d5b1fad3b6221f2.js": "6e4233cfff185957a7c0d9303375611af69daea9",
+    "https://github.com/Hackbit/angularattack2018-a-team/polyfills.2903ad11212d7d797800.js": "193f6d7b77c2bce633da2f543082303b4f32d7ed",
+    "https://github.com/Hackbit/angularattack2018-a-team/runtime.6afe30102d8fe7337431.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "https://github.com/Hackbit/angularattack2018-a-team/styles.1d7c87a42a3b2cca3b11.css": "b12133d6c27c59917ae445a1ad9cb5ffbfa7f8fc"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*\\.[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*\\/.*$"
+    }
+  ]
+}
