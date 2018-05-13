@@ -7,9 +7,16 @@ import {AudioQuestionComponent} from './components/audio-question/audio-question
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
+<<<<<<< HEAD
   { path: '', component: HomeComponent },
   { path: 'quiz', component: QuestionComponent },
   { path: 'audio-quiz', component: AudioQuestionComponent },
+=======
+  // { path: '', component: AudioQuestionComponent },
+  { path: 'question', component: QuestionComponent },
+  { path: 'audio-question', component: AudioQuestionComponent },
+  { path: '', component: QuestionComponent },
+>>>>>>> 06a61ca5d2b7449bf0ee44ec0839714af58b160b
   { path: 'question-form', component: QuestionGoogleFormComponent },
   { path: '**', component: QuestionComponent }
 ];
