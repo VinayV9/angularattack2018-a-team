@@ -20,7 +20,7 @@ export const questions : question[]=
     label:'Which of these U.S Presidents appeared on the television series "laugh-In"?',
     choices: [{option: 'A', answer: false }, {option: 'B', answer: false }, {option: 'C', answer: false }, {option: 'D', answer: false }],
     answer:'ANSWER',
-    audioUrl:'music',
+    audioUrl:'',
     timeAllocated:5
   },
   {
@@ -38,10 +38,10 @@ export const questions : question[]=
     timeAllocated:11
   },
   {
-    label:'Which of these U.S Presidents appeared on the television series "laugh-In"?',
+    label:'who is the artist of this alubum"?',
     choices: [{option: 'A', answer: false }, {option: 'B', answer: false }, {option: 'C', answer: false }, {option: 'D', answer: false }],
     answer:'ANSWER',
-    audioUrl:'',
+    audioUrl:'../../../assets/audio/audio1.mp3',
     timeAllocated:30
   },
   {
