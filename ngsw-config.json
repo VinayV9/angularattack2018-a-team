@@ -29,7 +29,8 @@
   "dataGroups": [{
     "name": "api-freshness",
     "urls": [
-      "/"
+      "/",
+      "/question-form"
     ],
     "cacheConfig": {
       "maxSize": 100,
