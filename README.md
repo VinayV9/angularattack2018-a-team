@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 # Stack development 
-UI (Angular material), React.js 
+Angular 6 UI  
 
 # PWA feature information
 
