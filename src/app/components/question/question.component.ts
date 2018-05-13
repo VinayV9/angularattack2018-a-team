@@ -6,6 +6,7 @@ import { ISubscription } from "rxjs/Subscription";
 import 'rxjs/add/observable/interval';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {MatSnackBar} from '@angular/material';
+import {MatRadioChange } from '@angular/material';
 
 @Component({
   selector: 'app-question',
@@ -16,11 +17,13 @@ import {MatSnackBar} from '@angular/material';
 export class QuestionComponent implements OnInit {
   @Input('secondsCount') secondsCount: number;
   @Output() notify: EventEmitter <number> = new EventEmitter<number>();
-
+  @Input() value:string;
   isTimeUp = false;
   questions: question[] = [];
   question: question;
- // qAllowedTime: number =  15;
+  optionChosen:any;
+  questionResponsed:boolean = false;
+  // qAllowedTime: number =  15;
   private questionSubscription: ISubscription;
   private rolloutNextQuestionSubs: ISubscription;
   selectedOption: string;
@@ -44,7 +47,8 @@ export class QuestionComponent implements OnInit {
    this.rolloutNextQuestionSubs = Observable.interval(10000)
      .subscribe((val) => { 
      if(this.isTimeUp) 
-       this.questionSubscription = this.refreshTimer(); 
+      console.log("Time");
+       this.questionSubscription = this.refreshTimer();
      });
   }
 
@@ -55,12 +59,13 @@ export class QuestionComponent implements OnInit {
   refresh(): void {
     this.question = this.questionService.nextQuestion();
     this.secondsCount = this.question.timeAllocated;
+    this.questionResponsed  =false;
    // this.notify.emit(question.timeAllocated);
   }
 
   refreshTimer(): ISubscription {
     return this.questionService.nextQuestionObs(this.questionAnswered).subscribe(
-      question => setTimeout(() => { console.log('Question filtered: %s', question.label) }, 1000),
+      question => setTimeout(() => { console.log('Question filtered: %s', question.label) }, 20),
       e => console.log('onError: %s', e),
       () => console.log('onCompleted')
     );
@@ -87,7 +92,10 @@ export class QuestionComponent implements OnInit {
     });
   }
 
-  
+  processResponse() {
+    this.questionResponsed  =true;
+    //console.log("value"+this.value);
+}
   /** TODO
    * This was meant to be used to move ot the next question automatically 
    * when the time out elapsed
