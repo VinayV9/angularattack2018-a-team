@@ -9,7 +9,7 @@ const routes: Routes = [
   // { path: '', component: AudioQuestionComponent },
   { path: 'question', component: QuestionComponent },
   { path: 'audio-question', component: AudioQuestionComponent },
-  { path: '', component: CountdownTimerComponent },
+  { path: '', component: QuestionComponent },
   { path: 'question-form', component: QuestionGoogleFormComponent },
   { path: '**', component: QuestionComponent }
 ];
