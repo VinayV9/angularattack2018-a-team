@@ -15,7 +15,7 @@ export class CountdownTimerComponent implements OnInit {
   // Message  QuestionComponent to inform of timeUp event
   @Output() timeUp : EventEmitter <boolean> = new EventEmitter<boolean>();
 
-  // Message countDownEvent to  QuestionComponent
+  // Message countDownEvent to current countdown value to parent
   @Output() countDownEvent : EventEmitter <number> = new EventEmitter<number>();
   
 
@@ -26,14 +26,14 @@ export class CountdownTimerComponent implements OnInit {
   ngOnInit() {
     timer(1000, 1000).subscribe(() => {
       this.secondsCount -= 1;
-      this.countDownEvent.emit(this.secondsCount);
+      //this.countDownEvent.emit(this.secondsCount);
       if (this.secondsCount === 0) {
 
          console.log("time is up");
         this.timeUp.emit(true);
-       
+      }
     });
-  }
+  }}
 
 
-}
+
