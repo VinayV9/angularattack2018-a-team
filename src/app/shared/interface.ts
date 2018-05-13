@@ -1,7 +1,7 @@
 export class  question {
    public   label:string;
    public choices: choice[];
-   public  answer: string;
+   public  answer: number;
    public  audioUrl: string;
    public timeAllocated:number;    
 };
@@ -18,43 +18,43 @@ export const questions : question[]=
 [
   {
     label:'Which of these U.S Presidents appeared on the television series "laugh-In"?',
-    choices: [{option: 'A', answer: false }, {option: 'B', answer: false }, {option: 'C', answer: false }, {option: 'D', answer: false }],
-    answer:'ANSWER',
-    audioUrl:'music',
-    timeAllocated:5
+    choices: [{option: 'Lyndon Johnson', answer: false }, {option: 'Richard Nixon', answer: false }, {option: 'Jimmy Carter', answer: false }, {option: 'Gerald Ford', answer: false }],
+    answer: 0,
+    audioUrl:'',
+    timeAllocated:10
   },
   {
     label:'What is the current version of angular?',
-    choices: [{option: '1', answer: false }, {option: '2', answer: false }, {option: '6', answer: false }, {option: '7', answer: false }],
-    answer:'ANSWER',
+    choices: [{option: 'One', answer: false }, {option: 'Two', answer: false }, {option: 'Six', answer: false }, {option: 'Seven', answer: false }],
+    answer:2,
     audioUrl:'',
     timeAllocated:10
   },
   {
     label:'How many colors are their in rainbow?',
-    choices: [{option: '3', answer: false }, {option: '7', answer: false }, {option: '1', answer: false }, {option: '4', answer: false }],
-    answer:'ANSWER',
+    choices: [{option: 'Three', answer: false }, {option: 'Seven', answer: false }, {option: 'One', answer: false }, {option: 'Four', answer: false }],
+    answer:1,
     audioUrl:'',
-    timeAllocated:11
+    timeAllocated:10
   },
   {
-    label:'Which of these U.S Presidents appeared on the television series "laugh-In"?',
-    choices: [{option: 'A', answer: false }, {option: 'B', answer: false }, {option: 'C', answer: false }, {option: 'D', answer: false }],
-    answer:'ANSWER',
-    audioUrl:'',
-    timeAllocated:30
+    label:'who is the artist of this alubum"?',
+    choices: [{option: 'katy', answer: false }, {option: 'justin', answer: false }, {option: 'ranold', answer: false }, {option: 'avicci', answer: false }],
+    answer:2,
+    audioUrl:'../../../assets/audio/audio1.mp3',
+    timeAllocated:15
   },
   {
-    label:'Which of these U.S Presidents appeared on the television series "laugh-In"?',
-    choices: [{option: 'A', answer: false }, {option: 'B', answer: false }, {option: 'C', answer: false }, {option: 'D', answer: false }],
-    answer:'ANSWER',
+    label:'PWA stands for?',
+    choices: [{option: 'personal web app', answer: false }, {option: 'personal windows app', answer: false }, {option: 'progressive web app', answer: false }, {option: 'post web address', answer: false }],
+    answer:2,
     audioUrl:'',
     timeAllocated:20
   },
   {
-    label:'Which of these U.S Presidents appeared on the television series "laugh-In"?',
-    choices: [{option: 'A', answer: false }, {option: 'B', answer: false }, {option: 'C', answer: false }, {option: 'D', answer: false }],
-    answer:'ANSWER',
+    label:'How will you create new Angular Project?',
+    choices: [{option: 'ng create [app-name]', answer: false }, {option: 'ng build [app-name]', answer: false }, {option: 'ng new [app-name]', answer: false }, {option: 'ng-prepare [app-name]', answer: false }],
+    answer:2,
     audioUrl:'',
     timeAllocated:25
   },

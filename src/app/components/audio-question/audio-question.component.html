@@ -2,7 +2,8 @@
 <mat-card class="q-box">
     <div class="con">
       <i class="material-icons music item">music_note</i>
-      <mat-card-title class="item">question about audio</mat-card-title>
+      <mat-card-title class="item">{{question.label}}
+      </mat-card-title>
     </div>
     <div class="pp">
         <mat-button-toggle-group #group="matButtonToggleGroup" >
@@ -20,7 +21,7 @@
 
 
 <audio #audioOption>
-    <source src='http://www.noiseaddicts.com/samples_1w72b820/2558.mp3' type="audio/mpeg">
+    <source src="{{question.audioUrl}}" type="audio/mpeg">
 </audio>
 
 

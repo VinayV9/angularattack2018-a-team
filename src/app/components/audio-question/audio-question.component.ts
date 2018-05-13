@@ -1,5 +1,5 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-
+import { Component, OnInit, ElementRef, ViewChild, Input } from '@angular/core';
+import { question } from '../../shared/interface';
 
 @Component({
   selector: 'app-audio-question',
@@ -21,5 +21,7 @@ export class AudioQuestionComponent implements OnInit {
   onAudioPause(){
     this.audioPlayerRef.nativeElement.pause();
   }
+
+  @Input() public question:question;
 
 }

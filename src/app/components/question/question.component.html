@@ -8,13 +8,13 @@
             <mat-card-title>{{question.label}}</mat-card-title>
         </mat-card>
        
-        <app-audio-question *ngIf=" question.audioUrl.length !== 0 "></app-audio-question>
+        <app-audio-question *ngIf=" question.audioUrl.length !== 0 " [question] ="question"></app-audio-question>
         
 
         <mat-card-content class="options">
             <mat-radio-group class="example-radio-group">
                 <mat-radio-button class="example-radio-button" *ngFor="let choice of question.choices" [value]="choice">
-                    {{ choice.option}} -> {{ question.audioUrl.length}}
+                    {{ choice.option}} 
                 </mat-radio-button>
             </mat-radio-group>
         </mat-card-content>
