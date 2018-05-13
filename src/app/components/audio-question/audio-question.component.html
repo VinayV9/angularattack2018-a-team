@@ -1,3 +1,27 @@
-<p>
-  audio-question works!
-</p>
+
+<mat-card class="q-box">
+    <div class="con">
+      <i class="material-icons music item">music_note</i>
+      <mat-card-title class="item">question about audio</mat-card-title>
+    </div>
+    <div class="pp">
+        <mat-button-toggle-group #group="matButtonToggleGroup" >
+            <mat-button-toggle value="play" (click)="onAudioPlay()" class="p">
+                <i class="material-icons">play_arrow</i>
+            </mat-button-toggle>
+            
+            <mat-button-toggle value="pause" (click)="onAudioPause()" class="p">
+                <i class="material-icons">pause</i>
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    
+</mat-card>
+
+
+<audio #audioOption>
+    <source src='http://www.noiseaddicts.com/samples_1w72b820/2558.mp3' type="audio/mpeg">
+</audio>
+
+
+

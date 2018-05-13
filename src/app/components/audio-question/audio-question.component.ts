@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-audio-question',
@@ -10,6 +11,15 @@ export class AudioQuestionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  @ViewChild('audioOption') audioPlayerRef: ElementRef;
+
+  onAudioPlay(){
+      this.audioPlayerRef.nativeElement.play();
+  }
+  onAudioPause(){
+    this.audioPlayerRef.nativeElement.pause();
   }
 
 }

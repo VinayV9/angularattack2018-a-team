@@ -4,13 +4,17 @@
         <app-countdown-timer [(secondsCount)]='secondsCount' (timeUp)='onNotify($event)' (countDownEvent)='onCountChange($event)'>
         </app-countdown-timer>
 
-        <mat-card class="q-box">
+        <mat-card class="q-box" *ngIf= " 'question.audioUrl' == '' ">
             <mat-card-title>{{question.label}}</mat-card-title>
         </mat-card>
+       
+        <app-audio-question *ngIf=" 'question.audioUrl' !== '' "></app-audio-question>
+        
+
         <mat-card-content class="options">
             <mat-radio-group class="example-radio-group">
                 <mat-radio-button class="example-radio-button" *ngFor="let choice of question.choices" [value]="choice">
-                    {{ choice.option }}
+                    {{ choice.option}} {{ question.audioUrl}}
                 </mat-radio-button>
             </mat-radio-group>
         </mat-card-content>
