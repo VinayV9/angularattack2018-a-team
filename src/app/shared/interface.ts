@@ -35,6 +35,18 @@ export const questions: question[] =
       timeAllocated: 30
     },
     {
+      label: 'Which observable will have an initial value?',
+      choices: [
+        {option: 'new Subject()', answer: false},
+        {option: 'new InitialSubject()', answer: false},
+        {option: 'new BehaviorSubject()', answer: true},
+        {option: 'new FirstSubject()', answer: false}
+      ],
+      answer: 'new BehaviorSubject()',
+      audioUrl: '/assets/audio/q2_c.mp3',
+      timeAllocated: 30
+    },
+    {
       label: 'What is the current version of angular?',
       choices: [{option: 'One', answer: false}, {option: 'Two', answer: false}, {option: 'Six', answer: false}, {
         option: 'Seven',
