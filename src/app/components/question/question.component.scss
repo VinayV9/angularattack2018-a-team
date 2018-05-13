@@ -6,10 +6,21 @@
 }
 
 .example-radio-group {
-  display: inline-flex;
-  flex-direction: column;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-flow: row wrap;
+  padding:10px;
 }
 
+.action{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
 .example-radio-button {
   margin: 5px;
 }
@@ -28,5 +39,11 @@
 
 .quiz-box{
   width:60vw;
-  height: 50vh;
+  height: auto;
+}
+
+.q-box{
+  margin: 0 auto;
+  width:80%;
+  height: auto;
 }
