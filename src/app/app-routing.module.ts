@@ -10,9 +10,7 @@ import { ResultComponent } from './components/result/result.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'quiz', component: QuestionComponent },
-  { path: 'audio-quiz', component: AudioQuestionComponent },
   { path: 'question', component: QuestionComponent },
-  { path: 'audio-question', component: AudioQuestionComponent },
   { path: 'question-form', component: QuestionGoogleFormComponent },
   { path: 'result', component: ResultComponent},
   { path: '**', component: QuestionComponent }

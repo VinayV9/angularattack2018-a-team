@@ -14,7 +14,15 @@
         "https://fonts.googleapis.com/css?family=Roboto:300,400,500",
         "https://fonts.googleapis.com/icon?family=Material+Icons",
         "https://fonts.gstatic.com/s/materialicons",
-        "https://docs.google.com/forms/d/e/1FAIpQLScWsqFTA7n-kSkgV2_FNTW34nkGTJZ2WtKw1PyD8gxTQ8UlQg/viewform?embedded=true"
+        "https://docs.google.com/forms/d/e/1FAIpQLScWsqFTA7n-kSkgV2_FNTW34nkGTJZ2WtKw1PyD8gxTQ8UlQg/viewform?embedded=true",
+        "https://avatars3.githubusercontent.com/u/28729847?v=4",
+        "https://avatars3.githubusercontent.com/u/793016?v=4",
+        "https://avatars1.githubusercontent.com/u/13967481?v=4",
+        "https://media.licdn.com/dms/image/C5103AQG3l7crf6oq6w/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=AVxzzOiXRHUae8yT4kzwnqEXlJcx7OXYC_9xmGeIt58",
+        "/",
+        "/question-form",
+        "/result",
+        "/quiz"
       ]
     }
   }, {
@@ -31,7 +39,9 @@
     "name": "api-freshness",
     "urls": [
       "/",
-      "/question-form"
+      "/question-form",
+      "/quiz",
+      "/result"
     ],
     "cacheConfig": {
       "maxSize": 100,
