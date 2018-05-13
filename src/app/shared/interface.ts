@@ -1,7 +1,7 @@
 export class question {
   public label: string;
   public choices: choice[];
-  public answer: number;
+  public answer: string;
   public audioUrl: string;
   public timeAllocated: number;
 };
@@ -30,7 +30,7 @@ export const questions: question[] =
         {option: 'Misko Hevery', answer: true},
         {option: 'Max Sills', answer: false}
       ],
-      answer: 2,
+      answer: 'Misko Hevery',
       audioUrl: '/assets/audio/q1_c.mp3',
       timeAllocated: 30
     },
@@ -40,7 +40,7 @@ export const questions: question[] =
         option: 'Seven',
         answer: false
       }],
-      answer: 2,
+      answer: 'Six',
       audioUrl: '',
       timeAllocated: 10
     },
@@ -50,7 +50,7 @@ export const questions: question[] =
         option: 'personal windows app',
         answer: false
       }, {option: 'progressive web app', answer: false}, {option: 'post web address', answer: false}],
-      answer: 2,
+      answer: 'progressive web app',
       audioUrl: '',
       timeAllocated: 20
     },
@@ -60,7 +60,7 @@ export const questions: question[] =
         option: 'ng build [app-name]',
         answer: false
       }, {option: 'ng new [app-name]', answer: false}, {option: 'ng-prepare [app-name]', answer: false}],
-      answer: 2,
+      answer: 'ng new [app-name]',
       audioUrl: '',
       timeAllocated: 25
     },
