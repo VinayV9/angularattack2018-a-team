@@ -19,7 +19,7 @@ export class QuestionComponent implements OnInit {
   isTimeUp = false;
   questions: question[] = [];
   question: question;
-  qAllowedTime: number =  15;
+ // qAllowedTime: number =  15;
   private questionSubscription: ISubscription;
   private rolloutNextQuestionSubs: ISubscription;
   selectedOption: string;
@@ -51,7 +51,8 @@ export class QuestionComponent implements OnInit {
 
   refresh(): void {
     this.question = this.questionService.nextQuestion();
-    this.notify.emit(5);
+    this.secondsCount = this.question.timeAllocated;
+   // this.notify.emit(question.timeAllocated);
   }
 
   refreshTimer(): ISubscription {
@@ -71,6 +72,9 @@ export class QuestionComponent implements OnInit {
     this.secondsCount = 5;
   }
 
+  onCountChange(newCount:number) {
+    this.secondsCount = newCount;
+  }
   /** TODO
    * This was meant to be used to move ot the next question automatically 
    * when the time out elapsed

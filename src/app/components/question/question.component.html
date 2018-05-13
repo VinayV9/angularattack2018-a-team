@@ -13,6 +13,10 @@
       </mat-card>
 </div>
 
+<app-countdown-timer [(secondsCount)]='secondsCount' 
+  (timeUp)='onNotify($event)'
+  (countDownEvent)='onCountChange($event)'>
+</app-countdown-timer>
 
 
 
