@@ -52,7 +52,7 @@ export class QuestionComponent implements OnInit {
   }
 
   refresh(): void {
-    this.questions.push(this.questionService.nextQuestion());
+    this.question = this.questionService.nextQuestion();
   }
 
   refreshTimer(): ISubscription {
@@ -62,7 +62,11 @@ export class QuestionComponent implements OnInit {
       () => console.log('onCompleted')
     );
   };
-/** TODO
+
+  ngOnDestroy() {
+    this.rolloutNextQuestionSubs.unsubscribe();
+  }
+  /** TODO
    * This was meant to be used to move ot the next question automatically 
    * when the time out elapsed
    *
@@ -75,11 +79,9 @@ export class QuestionComponent implements OnInit {
     this.questionSubscription.unsubscribe();
     this.refresh();
   };
-*/
+  */
 
 
-  ngOnDestroy() {
-    this.rolloutNextQuestionSubs.unsubscribe();
-  }
+
 
 }

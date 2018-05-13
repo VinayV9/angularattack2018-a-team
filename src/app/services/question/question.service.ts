@@ -26,7 +26,7 @@ export class QuestionService {
   private getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-
+  //Observable  of questions not answered
   nextQuestionObs(questionsAnswered:globals.question[]):Observable <globals.question> {
     return  Observable.from(globals.questions).filter(question => !questionsAnswered.includes(question));
   }

@@ -1,4 +1,4 @@
-<!-- <div class="question-container">
+ <!-- <div class="question-container">
   <app-countdown-timer (timeUp)="isTimeUp=true"></app-countdown-timer>
   <div class="question-description">
       {{ question.label }}
@@ -9,6 +9,8 @@
   <span> Next question </span>
 </button>
   <div class="answer-buttons">
+
+      <button mat-button>Click me!</button>
     <button>
       <span>A:</span>  {{ question.A }}
     </button>
@@ -32,13 +34,22 @@
     </div>
     <img src="/assets/example_quiz.png" style="width: 400px">
   </div>
-</div> -->
+</div> 
+
+ -->
+
+
+
+<mat-card>
+      <mat-card-title>{{question.label}}</mat-card-title>
+
+        <button  *ngFor="let anOption of question.choices" mat-raised-button (click)="refresh()">{{ anOption.option }}</button>
+ </mat-card>
 
 <mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper" color="warn">
         <mat-step label="question"  *ngFor="let question of questions; let i = index" color="warn">
             <mat-card >
                 <mat-card-title>
-
                   {{ question.label }}
                 </mat-card-title>
 
@@ -64,7 +75,7 @@
               <button mat-button (click)="stepper.reset()">Reset</button>
             </div>
         </mat-step>
-</mat-horizontal-stepper>
+</mat-horizontal-stepper> 
 
 <!--<app-countdown-timer (timeUp)="isTimeUp=true"></app-countdown-timer>-->
 
