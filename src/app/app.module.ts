@@ -17,6 +17,7 @@ import {QuestionComponent} from './components/question/question.component';
 //services
 import { QuestionService } from './services/question/question.service';
 import { QuestionGoogleFormComponent } from './components/question-google-form/question-google-form.component';
+import { AudioQuestionComponent } from './components/audio-question/audio-question.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { QuestionGoogleFormComponent } from './components/question-google-form/q
     NavbarComponent,
     CountdownTimerComponent,
     QuestionComponent,
-    QuestionGoogleFormComponent
+    QuestionGoogleFormComponent,
+    AudioQuestionComponent
   ],
   imports: [
     BrowserModule,
