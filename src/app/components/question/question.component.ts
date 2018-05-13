@@ -23,22 +23,15 @@ export class QuestionComponent implements OnInit {
   private questionSubscription: ISubscription;
   private rolloutNextQuestionSubs: ISubscription;
   selectedOption: string;
-  isLinear = false;
-  firstFormGroup: FormGroup;
   questionAnswered: question[] = [];
 
-  constructor(private questionService: QuestionService,
-    private _formBuilder: FormBuilder
-  ) {
+  constructor(private questionService: QuestionService) {
   }
 
   
 
   ngOnInit() {
     this.initialise();
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
     this.refresh();
     this.questionAnswered = [];
 
@@ -54,7 +47,6 @@ export class QuestionComponent implements OnInit {
 
   initialise(): void {
     this.questions = this.questionService.getQuestions();
-    console.log(this.questions);
   }
 
   refresh(): void {
