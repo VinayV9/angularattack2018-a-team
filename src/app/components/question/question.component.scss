@@ -26,6 +26,7 @@
 }
 .example-radio-button {
   margin: 5px;
+  font-size:20px;
 }
 
 .example-selected-value {
@@ -37,7 +38,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:88vh;
+  min-height:88vh;
+  height:auto;
   padding:10px;
 }
 
