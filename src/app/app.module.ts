@@ -20,6 +20,7 @@ import { QuestionService } from './services/question/question.service';
 import { QuestionGoogleFormComponent } from './components/question-google-form/question-google-form.component';
 import { AudioQuestionComponent } from './components/audio-question/audio-question.component';
 import { HomeComponent } from './components/home/home.component';
+import { ResultComponent } from './components/result/result.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HomeComponent } from './components/home/home.component';
     QuestionComponent,
     QuestionGoogleFormComponent,
     AudioQuestionComponent,
-    HomeComponent
+    HomeComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
