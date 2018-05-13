@@ -1,25 +1,22 @@
-<!-- <app-countdown-timer [(secondsCount)]='qAllowedTime' (timeUp)='onNotify($event)'></app-countdown-timer> -->
-
 <div class="quiz">
     <mat-card class="quiz-box">
+
+        <app-countdown-timer [(secondsCount)]='secondsCount' (timeUp)='onNotify($event)' (countDownEvent)='onCountChange($event)'>
+        </app-countdown-timer>
+
         <mat-card class="q-box">
             <mat-card-title>{{question.label}}</mat-card-title>
         </mat-card>
-            
-              <button  *ngFor="let choice of question.choices" mat-raised-button (click)="refresh()">
-                {{ choice.option }}
-              </button>
-              {{secondsCount}}
-      </mat-card>
+        <mat-card-content class="options">
+            <mat-radio-group class="example-radio-group">
+                <mat-radio-button class="example-radio-button" *ngFor="let choice of question.choices" [value]="choice">
+                    {{ choice.option }}
+                </mat-radio-button>
+            </mat-radio-group>
+        </mat-card-content>
+        <mat-card-actions class="action">
+            <button mat-raised-button color="warn" (click)="refresh()">Next Question</button>
+        </mat-card-actions>
+
+    </mat-card>
 </div>
-
-<app-countdown-timer [(secondsCount)]='secondsCount' 
-  (timeUp)='onNotify($event)'
-  (countDownEvent)='onCountChange($event)'>
-</app-countdown-timer>
-
-
-
-
-
-

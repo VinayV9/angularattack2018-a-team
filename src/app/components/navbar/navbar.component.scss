@@ -1,4 +1,3 @@
-
 .heading{
     flex: 1 1 auto;
     padding:5px;
@@ -14,7 +13,8 @@
 
 .example-sidenav-container {
     width: 100%;
-    height: 92vh;
+    min-height: 92vh;
+    height: auto;
     margin-top: 8vh;
 }
 

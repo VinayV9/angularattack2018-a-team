@@ -1,0 +1,87 @@
+
+.body{
+    background-color: rgba(0, 0, 0, 0.78); 
+    z-index: 3; 
+    min-height: 92vh;
+    height:auto;
+    cursor: pointer;
+}
+
+.getting{
+
+    padding:10px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    font-size:20px;
+    font-weight: 5; 
+}
+
+
+.box{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin-top:8vh;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    height: auto;
+}
+
+mat-card{
+    background-color: snow;
+}
+h1{
+    text-align: center;
+    font-weight: 150;
+    padding:10px;
+    color:snow;
+    padding-top:30px; 
+}
+
+.item{
+    padding:20px;
+    height:auto;
+    margin: 20px;
+}
+
+.title{
+    text-align: center;
+    padding:10px;
+}
+.example-card {
+    max-width: 400px;
+  }
+  
+  .avtar{
+    display: flex;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    margin:0 auto; 
+  }
+  .vinay {
+    background-image: url("https://avatars3.githubusercontent.com/u/28729847?v=4");
+    background-size: cover;
+  }
+  .robert {
+    background-image: url("https://avatars3.githubusercontent.com/u/793016?v=4");
+    background-size: cover;
+  }
+  .sirani {
+    background-image: url("https://avatars1.githubusercontent.com/u/13967481?v=4");
+    background-size: cover;
+  }
+  .fab {
+    background-image: url("https://media.licdn.com/dms/image/C5103AQG3l7crf6oq6w/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=AVxzzOiXRHUae8yT4kzwnqEXlJcx7OXYC_9xmGeIt58");
+    background-size: cover;
+  }
+  
+  
+  
+  
+  

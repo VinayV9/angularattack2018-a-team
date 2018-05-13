@@ -10,10 +10,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'quiz', component: QuestionComponent },
   { path: 'audio-quiz', component: AudioQuestionComponent },
-  // { path: '', component: AudioQuestionComponent },
   { path: 'question', component: QuestionComponent },
   { path: 'audio-question', component: AudioQuestionComponent },
-  // { path: '', component: QuestionComponent },
   { path: 'question-form', component: QuestionGoogleFormComponent },
   { path: '**', component: QuestionComponent }
 ];

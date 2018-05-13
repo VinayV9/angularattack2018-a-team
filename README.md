@@ -21,6 +21,14 @@ Supports all devices
 
 Supports all devices (android, ios, desktop, mac)
 
+## Github Pages Deploment
+
+npm i -g angular-cli-ghpages
+
+ng build --prod --base-href https://github.com/Hackbit/angularattack2018-a-team/
+
+ngh
+
 ## Local Development Info
 
 npm install
