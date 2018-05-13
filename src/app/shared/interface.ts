@@ -39,26 +39,6 @@ export const questions: question[] =
       timeAllocated: 10
     },
     {
-      label: 'How many colors are their in rainbow?',
-      choices: [{option: 'Three', answer: false}, {option: 'Seven', answer: false}, {option: 'One', answer: false}, {
-        option: 'Four',
-        answer: false
-      }],
-      answer: 1,
-      audioUrl: '',
-      timeAllocated: 10
-    },
-    {
-      label: 'who is the artist of this alubum"?',
-      choices: [{option: 'katy', answer: false}, {option: 'justin', answer: false}, {option: 'ranold', answer: false}, {
-        option: 'avicci',
-        answer: false
-      }],
-      answer: 2,
-      audioUrl: '../../../assets/audio/audio1.mp3',
-      timeAllocated: 15
-    },
-    {
       label: 'PWA stands for?',
       choices: [{option: 'personal web app', answer: false}, {
         option: 'personal windows app',
