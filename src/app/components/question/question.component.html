@@ -1,4 +1,7 @@
- <app-countdown-timer [(secondsCount)]='qAllowedTime' (timeUp)='onNotify($event)'></app-countdown-timer>
+<app-countdown-timer [(secondsCount)]='secondsCount' 
+  (timeUp)='onNotify($event)'
+  (countDownEvent)='onCountChange($event)'>
+</app-countdown-timer>
 <mat-card>
       <mat-card-title>{{question.label}}</mat-card-title>
         <button  *ngFor="let anOption of question.choices" mat-raised-button (click)="refresh()">{{ anOption.option }}</button>
