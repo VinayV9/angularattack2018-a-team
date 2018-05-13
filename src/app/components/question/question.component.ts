@@ -1,5 +1,5 @@
 import { Component, OnInit, Input,EventEmitter, Output } from '@angular/core';
-import { question } from '../../shared/interface';
+import { question , result} from '../../shared/interface';
 import { QuestionService } from '../../services/question/question.service';
 import {Observable} from 'rxjs/Observable';
 import { ISubscription } from "rxjs/Subscription";
@@ -16,10 +16,15 @@ import {MatSnackBar} from '@angular/material';
 export class QuestionComponent implements OnInit {
   @Input('secondsCount') secondsCount: number;
   @Output() notify: EventEmitter <number> = new EventEmitter<number>();
-
+  
+  alphabets : string[]= ['A', 'B', 'C', 'D'];
   isTimeUp = false;
   questions: question[] = [];
   question: question;
+  Result : result[];
+  result :result;
+  userChoice = '';
+
  // qAllowedTime: number =  15;
   private questionSubscription: ISubscription;
   private rolloutNextQuestionSubs: ISubscription;

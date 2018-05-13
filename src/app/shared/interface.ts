@@ -12,6 +12,12 @@ export class choice{
     public answer: boolean;
 };
 
+export class result{
+  public question: string;
+  public option: string;
+  public answer: number;
+  public userChoice: number;
+};
 
 export const questions : question[]= 
 
